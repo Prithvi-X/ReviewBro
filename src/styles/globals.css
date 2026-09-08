@@ -1,5 +1,6 @@
 @import './tokens.css';
 @import './typography.css';
+@import 'lenis/dist/lenis.css';
 
 @tailwind base;
 @tailwind components;

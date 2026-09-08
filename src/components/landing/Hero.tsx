@@ -11,9 +11,14 @@ export interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ className }) => {
   const handleScrollToComingSoon = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
+    const lenis = (window as any).__lenis
     const target = document.querySelector('#coming-soon')
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' })
+      if (lenis) {
+        lenis.scrollTo(target, { offset: -30, duration: 1.2 })
+      } else {
+        target.scrollIntoView({ behavior: 'smooth' })
+      }
     }
   }
 

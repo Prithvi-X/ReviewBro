@@ -67,9 +67,14 @@ export const Navbar: React.FC<NavbarProps> = ({
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     setMobileMenuOpen(false)
+    const lenis = (window as any).__lenis
     const target = document.querySelector(href)
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' })
+      if (lenis) {
+        lenis.scrollTo(target, { offset: -24, duration: 1.2 })
+      } else {
+        target.scrollIntoView({ behavior: 'smooth' })
+      }
     }
   }
 

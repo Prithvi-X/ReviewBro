@@ -1,4 +1,6 @@
 import React from 'react'
+import { useLenisScroll } from '@/hooks/useLenisScroll'
+import { ScrollProgress } from '@/components/ui/ScrollProgress'
 import { Navbar } from '@/components/layout/Navbar'
 import { Hero } from '@/components/landing/Hero'
 import { PlatformSection } from '@/components/landing/PlatformSection'
@@ -6,8 +8,14 @@ import { WhyReviewBro } from '@/components/landing/WhyReviewBro'
 import { Footer } from '@/components/landing/Footer'
 
 export const LandingPage: React.FC = () => {
+  // Initialize buttery-smooth Lenis kinetic momentum scroll
+  useLenisScroll()
+
   return (
     <div className="min-h-screen bg-[#071615] text-white flex flex-col selection:bg-brand-slate selection:text-white">
+      {/* Hairline Ambient Scroll Progress Flow */}
+      <ScrollProgress />
+
       {/* Fixed Adaptive Transforming Capsule Navbar */}
       <Navbar theme="adaptive" />
 
