@@ -14,9 +14,13 @@ async function run() {
   const viewports = [
     { name: 'desktop-1440', width: 1440, height: 900, isMobile: false },
     { name: 'mobile-390', width: 390, height: 844, isMobile: true },
+    { name: 'mobile-430', width: 430, height: 932, isMobile: true },
     { name: 'tablet-768', width: 768, height: 1024, isMobile: false },
+    { name: 'laptop-1024', width: 1024, height: 768, isMobile: false },
     { name: 'large-desktop-1920', width: 1920, height: 1080, isMobile: false }
   ];
+
+  let anyOverflow = false;
 
   for (const vp of viewports) {
     console.log(`Setting viewport: ${vp.name} (${vp.width}x${vp.height})`);
@@ -36,12 +40,13 @@ async function run() {
       return document.documentElement.scrollWidth > window.innerWidth;
     });
     console.log(`Viewport ${vp.name} horizontal scroll: ${hasHorizontalScroll ? 'YES (OVERFLOW!)' : 'NO (CLEAN)'}`);
+    if (hasHorizontalScroll) anyOverflow = true;
 
     const outFile = path.join(__dirname, `screenshot-${vp.name}.png`);
     await page.screenshot({ path: outFile, fullPage: false });
     console.log(`Captured: ${outFile}`);
 
-    // Also capture full page for desktop-1440 and mobile-390
+    // Capture full page for primary key viewports
     if (vp.name === 'desktop-1440' || vp.name === 'mobile-390') {
       const fullOutFile = path.join(__dirname, `screenshot-${vp.name}-full.png`);
       await page.screenshot({ path: fullOutFile, fullPage: true });
@@ -50,7 +55,11 @@ async function run() {
   }
 
   await browser.close();
-  console.log('All screenshots captured successfully!');
+  if (anyOverflow) {
+    console.error('FAILED: Horizontal overflow detected in one or more viewports!');
+    process.exit(1);
+  }
+  console.log('All 6 viewports verified with ZERO horizontal overflow!');
 }
 
 run().catch(err => {

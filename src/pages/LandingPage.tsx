@@ -7,14 +7,17 @@ import { Footer } from '@/components/landing/Footer'
 export const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#071615] text-white flex flex-col selection:bg-brand-slate selection:text-white">
-      {/* SECTION 1: HERO (Dark Deep Green) */}
-      <Hero />
+      {/* Semantic Main Content Container */}
+      <main id="main-content" className="flex-1 flex flex-col">
+        {/* SECTION 1: HERO (Dark Deep Green) */}
+        <Hero />
 
-      {/* SECTION 2: THE PLATFORM (Soft Neutral) */}
-      <PlatformSection />
+        {/* SECTION 2: THE PLATFORM (Soft Neutral) */}
+        <PlatformSection />
 
-      {/* SECTION 3: WHY REVIEWBRO + VISION + FINAL CTA (Soft Slate Cool Neutral) */}
-      <WhyReviewBro />
+        {/* SECTION 3: WHY REVIEWBRO + VISION + FINAL CTA (Soft Slate Cool Neutral) */}
+        <WhyReviewBro />
+      </main>
 
       {/* FOOTER (Minimal) */}
       <Footer />

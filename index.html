@@ -1,16 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/brand/logo-mark.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReviewBro — Reputation Management, Reimagined</title>
-    <!-- Preconnect & Google Fonts -->
+    
+    <!-- Primary Page Metadata -->
+    <title>ReviewBro | More Than Reviews. A Brighter Tomorrow.</title>
+    <meta name="description" content="ReviewBro helps businesses manage reviews, collect feedback, respond with AI, understand reputation insights, and grow from one simple platform." />
+    <meta name="theme-color" content="#071615" />
+    <link rel="icon" type="image/png" href="/brand/logo-mark.png" />
+    <link rel="apple-touch-icon" href="/app-icon.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://reviewbro.in/" />
+    <meta property="og:title" content="ReviewBro | More Than Reviews. A Brighter Tomorrow." />
+    <meta property="og:description" content="ReviewBro helps businesses manage reviews, collect feedback, respond with AI, understand reputation insights, and grow from one simple platform." />
+    <meta property="og:image" content="/brand/logo-mark.png" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://reviewbro.in/" />
+    <meta name="twitter:title" content="ReviewBro | More Than Reviews. A Brighter Tomorrow." />
+    <meta name="twitter:description" content="ReviewBro helps businesses manage reviews, collect feedback, respond with AI, understand reputation insights, and grow from one simple platform." />
+    <meta name="twitter:image" content="/brand/logo-mark.png" />
+
+    <!-- Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body class="bg-[#071615] text-neutral-900 antialiased selection:bg-brand-slate selection:text-white">
+    <!-- Accessible Skip to Content Link -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-neutral-900 focus:font-semibold focus:rounded-lg focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-brand-slate"
+    >
+      Skip to content
+    </a>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

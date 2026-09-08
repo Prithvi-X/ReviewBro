@@ -10,7 +10,7 @@ export interface PhoneMockupProps {
 export const PhoneMockup: React.FC<PhoneMockupProps> = ({ className }) => {
   return (
     <div className={cn('relative mx-auto flex items-center justify-center', className)}>
-      {/* Background Secondary Phone (Tilted with Sentiment Stats) - visible on md+ */}
+      {/* Background Secondary Phone (Tilted with Sentiment Stats) - visible on sm+ */}
       <div className="hidden sm:block absolute right-[-24px] lg:right-[-32px] top-6 w-[270px] rounded-[42px] bg-[#111917] p-2.5 shadow-xl border-3 border-[#243430] rotate-6 transform opacity-65 scale-95 pointer-events-none transition-all duration-300">
         <div className="w-full rounded-[32px] bg-[#f8faf9] overflow-hidden pt-8 pb-6 px-4 text-neutral-900 border border-black/5">
           <div className="flex items-center justify-between pb-2 mb-3 border-b border-neutral-200/50">
@@ -39,8 +39,8 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({ className }) => {
         </div>
       </div>
 
-      {/* Primary Foreground Phone Container */}
-      <div className="relative z-10 w-[290px] sm:w-[320px] rounded-[44px] bg-[#0c1312] p-3 shadow-2xl border-4 border-[#1f2d29]">
+      {/* Primary Foreground Phone Container with subtle hover elevation */}
+      <div className="relative z-10 w-[290px] sm:w-[320px] rounded-[44px] bg-[#0c1312] p-3 shadow-2xl border-4 border-[#1f2d29] transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)]">
         {/* Dynamic Island */}
         <div className="absolute top-5 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20" />
 
@@ -65,7 +65,7 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({ className }) => {
           </div>
 
           {/* Rating Card with Mini Sparkline */}
-          <div className="bg-white rounded-xl p-3.5 border border-neutral-200/80 shadow-xs mb-4">
+          <div className="bg-white rounded-xl p-3.5 border border-neutral-200/80 shadow-xs mb-4 hover:border-brand-slate/30 transition-colors">
             <span className="text-[11px] text-neutral-500 font-medium">Average Rating</span>
             <div className="flex items-center justify-between mt-1">
               <div className="flex items-baseline gap-1">
@@ -93,7 +93,7 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({ className }) => {
 
             <div className="space-y-2">
               {/* Item 1 */}
-              <div className="flex items-center gap-2.5 p-2 bg-white rounded-lg border border-neutral-100 shadow-2xs">
+              <div className="flex items-center gap-2.5 p-2 bg-white rounded-lg border border-neutral-100 shadow-2xs hover:border-neutral-300 hover:bg-neutral-50/80 transition-all cursor-default">
                 <div className="w-6 h-6 rounded-full bg-white border border-neutral-200 flex items-center justify-center text-[10px] shrink-0">
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
@@ -109,7 +109,7 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({ className }) => {
               </div>
 
               {/* Item 2 */}
-              <div className="flex items-center gap-2.5 p-2 bg-white rounded-lg border border-neutral-100 shadow-2xs">
+              <div className="flex items-center gap-2.5 p-2 bg-white rounded-lg border border-neutral-100 shadow-2xs hover:border-neutral-300 hover:bg-neutral-50/80 transition-all cursor-default">
                 <div className="w-6 h-6 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-[10px] font-bold shrink-0">
                   AI
                 </div>
@@ -120,7 +120,7 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({ className }) => {
               </div>
 
               {/* Item 3 */}
-              <div className="flex items-center gap-2.5 p-2 bg-white rounded-lg border border-neutral-100 shadow-2xs">
+              <div className="flex items-center gap-2.5 p-2 bg-white rounded-lg border border-neutral-100 shadow-2xs hover:border-neutral-300 hover:bg-neutral-50/80 transition-all cursor-default">
                 <div className="w-6 h-6 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-[10px] font-bold shrink-0">
                   ★
                 </div>

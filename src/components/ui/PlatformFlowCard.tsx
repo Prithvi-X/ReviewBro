@@ -46,21 +46,23 @@ export const PlatformFlowCard: React.FC<PlatformFlowCardProps> = ({
   return (
     <div
       className={cn(
-        'relative bg-gradient-to-b from-white to-[#fbfaf8] border border-neutral-200/80 rounded-2xl p-6 shadow-sm flex flex-col items-start gap-4 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5',
+        'group relative bg-gradient-to-b from-white to-[#fbfaf8] border border-neutral-200/80 rounded-2xl p-6 shadow-sm flex flex-col items-start gap-4 transition-all duration-300 hover:shadow-md hover:-translate-y-1 hover:border-brand-slate/30 cursor-default',
         className
       )}
     >
       <div className="w-full flex items-center justify-between">
-        {/* Icon Circle */}
+        {/* Icon Container with scale micro-interaction */}
         <div
           className={cn(
-            'w-12 h-12 rounded-2xl border flex items-center justify-center shadow-2xs',
+            'w-12 h-12 rounded-2xl border flex items-center justify-center shadow-2xs transition-transform duration-300 group-hover:scale-105',
             iconConfig.bg
           )}
         >
-          <IconComponent className="w-6 h-6" />
+          <IconComponent className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
         </div>
-        <span className="text-xs font-mono font-bold text-neutral-300">0{step}</span>
+        <span className="text-xs font-mono font-bold text-neutral-300 group-hover:text-brand-slate transition-colors">
+          0{step}
+        </span>
       </div>
 
       {/* Content */}

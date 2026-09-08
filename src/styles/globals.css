@@ -29,6 +29,19 @@
     outline: 2px solid var(--color-brand-slate);
     outline-offset: 2px;
   }
+
+  /* Accessibility: Prefers reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer utilities {
@@ -68,5 +81,19 @@
   /* Flow card subtle gradient top sheen */
   .flow-card-sheen {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 246, 241, 0.7) 100%);
+  }
+
+  /* Restrained ambient floating animation for product preview */
+  @keyframes subtleFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .animate-subtle-float {
+    animation: subtleFloat 6s ease-in-out infinite;
   }
 }

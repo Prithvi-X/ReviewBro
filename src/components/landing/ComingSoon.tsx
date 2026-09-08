@@ -8,28 +8,37 @@ export interface ComingSoonProps {
 
 export const ComingSoon: React.FC<ComingSoonProps> = ({ className }) => {
   return (
-    <div className={`mt-16 sm:mt-20 pt-12 text-center max-w-xl mx-auto flex flex-col items-center ${className || ''}`}>
-      {/* Primary Dark Pill Button */}
-      <Button
-        variant="dark-pill"
-        size="lg"
-        withArrow
-        className="px-8 py-3.5 shadow-md hover:shadow-lg transition-all text-base"
+    <div
+      id="coming-soon"
+      className={`mt-16 sm:mt-20 pt-12 text-center max-w-xl mx-auto flex flex-col items-center scroll-mt-24 ${className || ''}`}
+    >
+      {/* Primary Dark Pill Button with early-access intent */}
+      <a
+        href="mailto:hello@reviewbro.in?subject=ReviewBro%20Early%20Access"
+        className="inline-block group focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 rounded-full"
+        aria-label="Request Early Access to ReviewBro via email"
       >
-        Coming Soon
-      </Button>
+        <Button
+          variant="dark-pill"
+          size="lg"
+          withArrow
+          className="px-8 py-3.5 shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all text-base"
+        >
+          Coming Soon
+        </Button>
+      </a>
 
       {/* Supporting Copy */}
-      <p className="mt-4 text-xs sm:text-sm text-neutral-500 leading-relaxed max-w-md">
+      <p className="mt-4 text-xs sm:text-sm text-neutral-600 leading-relaxed max-w-md">
         We're building ReviewBro to make reputation management simpler, smarter, and more useful for modern businesses.
       </p>
 
-      {/* Optional tiny text & domain badge */}
-      <div className="mt-3 flex items-center gap-2">
+      {/* Domain badge & invitation text */}
+      <div className="mt-3.5 flex items-center gap-2">
         <span className="text-[11px] font-mono font-medium text-brand-slate bg-brand-slate/10 px-2.5 py-0.5 rounded-full">
           {BRAND.domain}
         </span>
-        <span className="text-[11px] text-neutral-400">
+        <span className="text-[11px] text-neutral-500 font-medium">
           Be among the first to experience ReviewBro.
         </span>
       </div>
