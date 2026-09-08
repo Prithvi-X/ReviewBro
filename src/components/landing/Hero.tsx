@@ -2,7 +2,6 @@ import React from 'react'
 import { Button } from '@/components/ui/Button'
 import { Eyebrow } from '@/components/ui/Eyebrow'
 import { Container } from '@/components/layout/Container'
-import { Navbar } from '@/components/layout/Navbar'
 import { DashboardShell } from '@/components/product/DashboardShell'
 
 export interface HeroProps {
@@ -26,10 +25,7 @@ export const Hero: React.FC<HeroProps> = ({ className }) => {
       {/* Subtle radial ambient sheen */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_50%_at_50%_-15%,rgba(15,36,30,0.9)_0%,transparent_75%)]" />
 
-      {/* Header Navigation */}
-      <Navbar theme="dark" />
-
-      <Container size="xl" className="relative z-10 pt-8 sm:pt-12 lg:pt-16">
+      <Container size="xl" className="relative z-10 pt-24 sm:pt-28 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Headline, Copy & CTAs */}
           <div className="lg:col-span-5 flex flex-col items-start text-left">
