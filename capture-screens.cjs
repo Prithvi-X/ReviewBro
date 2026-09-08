@@ -17,6 +17,8 @@ async function run() {
     { name: 'mobile-430', width: 430, height: 932, isMobile: true },
     { name: 'tablet-768', width: 768, height: 1024, isMobile: false },
     { name: 'laptop-1024', width: 1024, height: 768, isMobile: false },
+    { name: 'desktop-1280', width: 1280, height: 800, isMobile: false },
+    { name: 'desktop-1440', width: 1440, height: 900, isMobile: false },
     { name: 'large-desktop-1920', width: 1920, height: 1080, isMobile: false }
   ];
 

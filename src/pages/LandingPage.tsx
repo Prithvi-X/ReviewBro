@@ -12,26 +12,15 @@ export const LandingPage: React.FC = () => {
         {/* SECTION 1: HERO (Dark Deep Green) */}
         <Hero />
 
-        {/* SECTION 2: THE PLATFORM (Soft Neutral) */}
+        {/* SECTION 2: THE PLATFORM (Soft Warm Neutral) */}
         <PlatformSection />
 
-        {/* SECTION 3: WHY REVIEWBRO + VISION + FINAL CTA (Soft Slate Cool Neutral) */}
+        {/* SECTION 3: WHY REVIEWBRO + VISION + FINAL CTA (Cool Slate Neutral) */}
         <WhyReviewBro />
       </main>
 
       {/* FOOTER (Minimal) */}
       <Footer />
-
-      {/* Development Link to Internal Design System */}
-      <div className="bg-[#050f0e] border-t border-white/5 py-2 px-4 text-center text-[11px] text-neutral-500">
-        <span>Internal Developer Tools: </span>
-        <a
-          href="/dev/design-system"
-          className="text-brand-slate-light hover:underline ml-1 font-mono"
-        >
-          /dev/design-system
-        </a>
-      </div>
     </div>
   )
 }
