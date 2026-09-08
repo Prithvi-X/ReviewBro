@@ -1,0 +1,79 @@
+:root {
+  /* ==========================================================================
+     REVIEWBRO DESIGN TOKENS
+     Source of Truth: ReviewBro Brand Identity Board & Approved Mockups
+     ========================================================================== */
+
+  /* --- BRAND COLORS --- */
+  --color-brand-deep-green: #071615;          /* Rich forest dark green hero base */
+  --color-brand-deep-green-glow: #0f241e;     /* Hero metallic sheen & radial center */
+  --color-brand-green: #0b1715;               /* Core brand deep green */
+  --color-brand-green-light: #182e25;         /* Subtle elevated dark surface */
+  
+  --color-brand-slate: #64788e;               /* Approved slate blue (wordmark "Bro", accents) */
+  --color-brand-slate-light: #899db0;         /* Slate highlight / soft icon tint */
+  --color-brand-slate-dark: #3a4b5a;          /* Deep slate blue */
+  --color-brand-slate-subtle: rgba(100, 120, 142, 0.12); /* Subtle slate tag background */
+
+  /* --- NEUTRALS --- */
+  --color-neutral-950: #070b0a;               /* Deepest dark text */
+  --color-neutral-900: #0f1715;               /* Primary headings & dark elements */
+  --color-neutral-800: #232d2a;               /* Secondary dark surfaces */
+  --color-neutral-700: #384340;               /* Primary dark body text */
+  --color-neutral-600: #525f5b;               /* Secondary body text */
+  --color-neutral-500: #6e7a76;               /* Muted text & placeholders */
+  --color-neutral-400: #9ba7a2;               /* Inactive icons & subtle borders */
+  --color-neutral-300: #c8cec9;               /* Card outlines & dividers */
+  --color-neutral-200: #e2e6e3;               /* Light borders & hover fills */
+  --color-neutral-100: #f0f2ee;               /* Light pill backgrounds & tags */
+  --color-neutral-50: #f7f9f7;                /* Subtle off-white section background */
+  --color-neutral-warm: #f9f6f1;              /* Approved soft neutral section background */
+  --color-neutral-warm-card: #fdfcfb;         /* Warm surface card fill */
+  --color-white: #ffffff;                     /* Clean white */
+
+  /* --- SEMANTIC COLORS --- */
+  --color-success: #16a34a;                   /* Metric +trend, replied badges */
+  --color-success-bg: rgba(22, 163, 74, 0.12);/* Light green pill background */
+  --color-warning: #d97706;                   /* Star rating amber */
+  --color-warning-bg: rgba(217, 119, 6, 0.12);/* Amber badge background */
+  --color-danger: #dc2626;                    /* Negative alert / traditional tools cross */
+  --color-danger-bg: rgba(220, 38, 38, 0.12); /* Light danger pill background */
+  --color-info: #2563eb;                      /* Platform informational accents */
+  --color-info-bg: rgba(37, 99, 235, 0.12);   /* Soft info tint */
+
+  /* --- SPACING SCALE (PREDICTABLE & SYSTEMATIC) --- */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-30: 7.5rem;   /* 120px */
+
+  /* --- BORDER RADIUS TOKENS --- */
+  --radius-control: 8px;     /* Small controls, inputs, badges */
+  --radius-card: 14px;       /* Standard cards & metric cards */
+  --radius-card-lg: 20px;    /* Flow cards, feature surfaces */
+  --radius-dashboard: 28px;  /* Product mockup containers */
+  --radius-pill: 9999px;     /* Buttons, status pills, tags */
+
+  /* --- SHADOWS & DEPTH --- */
+  --shadow-card-subtle: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 14px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 8px 24px -4px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  --shadow-surface-elevated: 0 12px 36px -6px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  --shadow-product-mockup: 0 24px 70px -12px rgba(0, 0, 0, 0.5), 0 0 1px 1px rgba(255, 255, 255, 0.08);
+  --shadow-dark-glow: 0 0 120px 20px rgba(15, 36, 30, 0.5);
+  --shadow-hero-inset: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+
+  /* --- TRANSITIONS & MOTION --- */
+  --ease-out-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+}
