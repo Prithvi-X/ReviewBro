@@ -32,7 +32,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   useEffect(() => {
     const checkScrollState = () => {
       const scrollY = window.scrollY
-      setIsScrolled(scrollY > 20)
+      // Refined threshold so the morph begins gracefully as user scrolls
+      setIsScrolled(scrollY > 35)
 
       // Detect if floating navbar intersects light section (#product)
       const productSection = document.getElementById('product')
@@ -82,21 +83,22 @@ export const Navbar: React.FC<NavbarProps> = ({
     <>
       <header
         className={cn(
-          'fixed top-0 inset-x-0 z-50 pointer-events-none transition-all duration-300 ease-out',
+          'fixed top-0 inset-x-0 z-50 pointer-events-none transition-[padding] duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)]',
           className
         )}
       >
         <div
           className={cn(
-            'pointer-events-auto transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center justify-between',
+            'pointer-events-auto flex items-center justify-between rounded-full',
+            'transition-[max-width,width,padding,margin,background-color,border-color,box-shadow] duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] will-change-[max-width,width,transform]',
             isScrolled
-              ? 'mt-3 sm:mt-4 mx-auto w-[92%] sm:w-[88%] lg:w-[80%] max-w-4xl py-2.5 px-5 sm:px-6 rounded-full'
-              : 'mt-0 mx-auto w-full max-w-7xl py-5 px-4 sm:px-6 lg:px-8 rounded-none',
+              ? 'mt-3 sm:mt-4 mx-auto w-[92%] sm:w-[88%] lg:w-[78%] max-w-4xl py-2 px-5 sm:px-6'
+              : 'mt-0 mx-auto w-full max-w-7xl py-5 px-4 sm:px-6 lg:px-8',
             // Visual capsule styles & adaptive theme
             !isScrolled
               ? 'bg-transparent border border-transparent shadow-none text-white'
               : isDark
-                ? 'bg-[#071615]/90 backdrop-blur-xl border border-white/12 shadow-2xl shadow-black/50 text-white'
+                ? 'bg-[#071615]/85 backdrop-blur-xl border border-transparent shadow-2xl shadow-black/70 text-white'
                 : 'bg-white/92 backdrop-blur-xl border border-neutral-200/90 shadow-xl shadow-neutral-900/10 text-neutral-900'
           )}
         >
@@ -118,7 +120,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 href={link.href}
                 onClick={(e) => handleScrollTo(e, link.href)}
                 className={cn(
-                  'relative py-1 transition-colors duration-150 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-slate-light',
+                  'relative py-1 transition-colors duration-200 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-slate-light',
                   isDark
                     ? 'text-white/80 hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-slate after:transition-all'
                     : 'text-neutral-600 hover:text-neutral-950 after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-neutral-900 after:transition-all'
@@ -137,9 +139,9 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="inline-block"
             >
               <Button
-                variant={isDark ? (isScrolled ? 'primary-pill' : 'outline') : 'dark-pill'}
+                variant={isDark ? 'outline' : 'dark-pill'}
                 size="sm"
-                className="text-xs px-4 py-1.5 h-9 rounded-full transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                className="text-xs px-4 py-1.5 h-9 rounded-full transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               >
                 Coming Soon
               </Button>
@@ -169,7 +171,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 ? 'w-[92%] sm:w-[88%] mx-auto'
                 : 'w-[calc(100%-2rem)] max-w-7xl mx-auto',
               isDark
-                ? 'bg-[#071615]/95 backdrop-blur-2xl border-white/12 text-white shadow-2xl'
+                ? 'bg-[#071615]/95 backdrop-blur-2xl border-transparent text-white shadow-2xl'
                 : 'bg-white/95 backdrop-blur-2xl border-neutral-200 text-neutral-900 shadow-xl'
             )}
           >
@@ -195,7 +197,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="block w-full"
               >
                 <Button
-                  variant={isDark ? 'primary-pill' : 'dark-pill'}
+                  variant={isDark ? 'outline' : 'dark-pill'}
                   size="sm"
                   className="w-full justify-center text-xs"
                 >
