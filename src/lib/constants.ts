@@ -1,5 +1,7 @@
 /**
  * ReviewBro Brand & Design System Constants
+ * NOTE: All review items, metrics, and figures below are ILLUSTRATIVE MOCK DATA ONLY
+ * intended solely for Phase 1 design system and component presentation.
  */
 
 export const BRAND = {
@@ -16,6 +18,7 @@ export const BRAND = {
   heroSubtitle:
     'Manage reviews, collect more feedback, reply with AI, understand what customers are saying, and grow your business — all in one simple platform.',
   status: 'ReviewBro is currently in development.',
+  version: '1.0.0-phase1.refinement',
   socials: {
     linkedin: 'https://linkedin.com',
     twitter: 'https://x.com',
@@ -23,6 +26,9 @@ export const BRAND = {
   },
 }
 
+/**
+ * ILLUSTRATIVE MOCK DATA ONLY - UI Demonstration Data
+ */
 export const SAMPLE_METRICS = [
   {
     id: 'rating',
@@ -58,6 +64,9 @@ export const SAMPLE_METRICS = [
   },
 ]
 
+/**
+ * ILLUSTRATIVE MOCK DATA ONLY - UI Demonstration Data
+ */
 export const SAMPLE_REVIEWS = [
   {
     id: 'rev-1',
@@ -91,6 +100,31 @@ export const SAMPLE_REVIEWS = [
   },
 ]
 
+/**
+ * ILLUSTRATIVE MOCK DATA ONLY - Reusable Recommendation Cards
+ */
+export const SAMPLE_RECOMMENDATIONS = [
+  {
+    id: 'rec-1',
+    title: 'Automate WhatsApp Feedback on Weekends',
+    description: 'Customer footfall peaks between Friday and Sunday. Activating automated WhatsApp review requests within 2 hours of visits is estimated to lift your monthly 5-star volume.',
+    impact: '+18% expected review volume',
+    category: 'growth' as const,
+    actionLabel: 'Enable Auto-Request',
+  },
+  {
+    id: 'rec-2',
+    title: 'Resolve Peak Wait Time Mentions',
+    description: '14 recent reviews cited longer wait times on Friday 8–10 PM. Consider updating front-of-house table readiness alerts to protect your 4.7★ average.',
+    impact: 'Protects 4.7★ rating score',
+    category: 'retention' as const,
+    actionLabel: 'View Topic Breakdown',
+  },
+]
+
+/**
+ * ILLUSTRATIVE MOCK DATA ONLY - 5-Step Platform Capability Flow
+ */
 export const PLATFORM_STEPS = [
   {
     id: 'manage',
@@ -129,6 +163,9 @@ export const PLATFORM_STEPS = [
   },
 ]
 
+/**
+ * ILLUSTRATIVE MOCK DATA ONLY - Comparison Points
+ */
 export const COMPARISON_POINTS = {
   traditional: [
     'Fragmented platforms',
