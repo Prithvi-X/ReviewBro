@@ -7,6 +7,10 @@ export interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ className }) => {
+  const mailtoUrl = `mailto:${BRAND.contact.email}?subject=${encodeURIComponent(
+    BRAND.contact.inquirySubject
+  )}&body=${encodeURIComponent(BRAND.contact.inquiryBody)}`
+
   return (
     <footer
       id="contact"
@@ -20,12 +24,12 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
           </span>
           <span className="hidden sm:inline text-neutral-300">•</span>
           <a
-            href="mailto:hello@reviewbro.in"
+            href={mailtoUrl}
             className="inline-flex items-center gap-1.5 text-neutral-600 hover:text-neutral-950 font-medium transition-colors"
             aria-label="Contact ReviewBro via email"
           >
             <Mail className="w-3.5 h-3.5" />
-            <span>hello@reviewbro.in</span>
+            <span>{BRAND.contact.email}</span>
           </a>
         </div>
 

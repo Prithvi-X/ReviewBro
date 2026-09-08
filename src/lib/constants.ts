@@ -19,6 +19,35 @@ export const BRAND = {
     'Manage reviews, collect more feedback, reply with AI, understand what customers are saying, and grow your business — all in one simple platform.',
   status: 'ReviewBro is currently in development.',
   version: '1.0.0-phase1.refinement',
+  email: 'Yoitspandamon@zohomail.com',
+  contact: {
+    email: 'Yoitspandamon@zohomail.com',
+    earlyAccessSubject: 'ReviewBro Early Access Request - [Business Name]',
+    earlyAccessBody: `Hello ReviewBro Team,
+
+I would like to request early access to ReviewBro for my business.
+
+Here are my details:
+• Business Name: 
+• Business Category / Industry: 
+• City & Country: 
+• Current Review Platforms (e.g., Google, Trustpilot): 
+• Phone / WhatsApp: 
+• What is your biggest challenge with customer reviews right now? 
+
+Looking forward to your reply!`,
+    inquirySubject: 'ReviewBro General Inquiry',
+    inquiryBody: `Hello ReviewBro Team,
+
+I would like to connect regarding ReviewBro:
+
+• Name: 
+• Business Name (optional): 
+• Contact Phone: 
+• Inquiry / Question: 
+
+Thank you!`,
+  },
   socials: {
     linkedin: 'https://linkedin.com',
     twitter: 'https://x.com',

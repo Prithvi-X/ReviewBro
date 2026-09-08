@@ -7,6 +7,10 @@ export interface ComingSoonProps {
 }
 
 export const ComingSoon: React.FC<ComingSoonProps> = ({ className }) => {
+  const mailtoUrl = `mailto:${BRAND.contact.email}?subject=${encodeURIComponent(
+    BRAND.contact.earlyAccessSubject
+  )}&body=${encodeURIComponent(BRAND.contact.earlyAccessBody)}`
+
   return (
     <div
       id="coming-soon"
@@ -14,7 +18,7 @@ export const ComingSoon: React.FC<ComingSoonProps> = ({ className }) => {
     >
       {/* Primary Dark Pill Button with early-access intent */}
       <a
-        href="mailto:hello@reviewbro.in?subject=ReviewBro%20Early%20Access"
+        href={mailtoUrl}
         className="inline-block group focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 rounded-full"
         aria-label="Request Early Access to ReviewBro via email"
       >
