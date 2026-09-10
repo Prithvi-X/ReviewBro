@@ -263,7 +263,7 @@ export const CO_FOUNDERS = [
 ]
 
 export const PRIMARY_FOUNDER_VENTURES = [
-  { name: 'WithAtman.in', href: 'https://WithAtman.in/' },
+  { name: 'WithAtman.in', href: 'https://WithAtman.in/', highlight: 'gold' as const },
   { name: 'Xaya.in', href: 'https://Xaya.in/' },
   { name: 'Bottleneck.in', href: 'https://Bottleneck.in/' },
   { name: 'Xampire Labs', href: undefined as string | undefined },

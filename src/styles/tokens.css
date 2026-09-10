@@ -82,3 +82,45 @@
   --duration-normal: 250ms;
   --duration-slow: 400ms;
 }
+
+/* --- GOLDEN SHINE ATTENTION EFFECT --- */
+@keyframes goldShine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes goldPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(245, 197, 66, 0.45)) drop-shadow(0 0 12px rgba(234, 179, 8, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(254, 240, 138, 0.75)) drop-shadow(0 0 20px rgba(245, 197, 66, 0.45));
+  }
+}
+
+.gold-shine-text {
+  background: linear-gradient(
+    110deg,
+    #eab308 0%,
+    #fde047 30%,
+    #ffffff 50%,
+    #fde047 70%,
+    #ca8a04 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShine 3s linear infinite, goldPulse 3s ease-in-out infinite;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  display: inline-block;
+}
+
+.gold-shine-text:hover {
+  filter: drop-shadow(0 0 14px rgba(254, 240, 138, 0.9)) drop-shadow(0 0 24px rgba(245, 197, 66, 0.6));
+}
+

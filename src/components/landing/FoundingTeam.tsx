@@ -113,7 +113,11 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
                         href={venture.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-neutral-200 hover:text-white underline-offset-4 hover:underline transition-colors duration-200 font-medium"
+                        className={
+                          venture.highlight === 'gold'
+                            ? 'gold-shine-text font-semibold relative inline-block underline-offset-4 hover:underline transition-all duration-300'
+                            : 'text-neutral-200 hover:text-white underline-offset-4 hover:underline transition-colors duration-200 font-medium'
+                        }
                       >
                         {venture.name}
                       </a>
