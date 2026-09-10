@@ -37,9 +37,9 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(255,255,255,0.03)_0%,transparent_80%)] pointer-events-none" />
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.02)_0%,transparent_60%)] pointer-events-none" />
 
-          {/* Portrait Area / Polished Frame */}
+          {/* Portrait Area / Compact Polished Frame (occupies ~25-30% card width on desktop/tablet, compact on mobile) */}
           <div
-            className={`w-full sm:w-64 md:w-72 lg:w-80 aspect-[4/5] shrink-0 rounded-xl overflow-hidden relative bg-black/30 border border-white/10 flex flex-col items-center justify-center ${
+            className={`w-44 sm:w-52 md:w-56 lg:w-[300px] aspect-[4/5] mx-auto sm:mx-0 shrink-0 rounded-xl overflow-hidden relative bg-black/30 border border-white/10 flex flex-col items-center justify-center ${
               PRIMARY_FOUNDER.imageSrc ? 'p-0' : 'p-6'
             } select-none z-10 shadow-inner`}
           >
@@ -56,22 +56,22 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.06)_0%,transparent_70%)] pointer-events-none" />
 
                 {/* Monogram Badge */}
-                <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-xs border border-white/15 flex items-center justify-center relative z-10 transition-transform duration-300 group-hover:scale-105">
+                <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-xs border border-white/15 flex items-center justify-center relative z-10 transition-transform duration-300 group-hover:scale-105">
                   <span className="font-display font-extrabold text-2xl text-white tracking-tight">
                     {PRIMARY_FOUNDER.initials}
                   </span>
                 </div>
 
                 {/* Micro Tag */}
-                <span className="mt-3.5 text-[11px] font-mono font-semibold uppercase tracking-wider text-neutral-300 bg-white/10 backdrop-blur-xs px-3 py-0.5 rounded-full border border-white/15 relative z-10">
+                <span className="mt-3 text-[11px] font-mono font-semibold uppercase tracking-wider text-neutral-300 bg-white/10 backdrop-blur-xs px-3 py-0.5 rounded-full border border-white/15 relative z-10">
                   Founder & CEO
                 </span>
               </>
             )}
           </div>
 
-          {/* Content Area */}
-          <div className="flex-1 flex flex-col justify-center mt-6 sm:mt-0 relative z-10">
+          {/* Content Area (Breathing room, name and role as primary visual anchor) */}
+          <div className="flex-1 flex flex-col justify-center mt-6 sm:mt-0 relative z-10 sm:pl-1 lg:pl-2">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-xs font-bold uppercase tracking-wider text-brand-slate-light bg-white/10 border border-white/10 px-2.5 py-1 rounded-md">
                 {PRIMARY_FOUNDER.title}
@@ -82,16 +82,16 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
               {PRIMARY_FOUNDER.name}
             </h3>
 
-            <p className="text-sm sm:text-base font-semibold text-brand-slate-light mt-2 pb-4 border-b border-white/10">
+            <p className="text-sm sm:text-base font-semibold text-brand-slate-light mt-1.5 pb-3.5 border-b border-white/10">
               {PRIMARY_FOUNDER.focus}
             </p>
 
-            <p className="text-sm sm:text-base text-neutral-300 leading-relaxed mt-4 max-w-xl">
+            <p className="text-sm sm:text-base text-neutral-300 leading-relaxed mt-3.5 max-w-xl">
               {PRIMARY_FOUNDER.description}
             </p>
 
             {/* Also Building Section */}
-            <div className="mt-5 pt-4 border-t border-white/10">
+            <div className="mt-4 pt-3.5 border-t border-white/10">
               <p className="text-[11px] font-mono font-semibold uppercase tracking-wider text-brand-slate-light mb-2">
                 ALSO BUILDING
               </p>
@@ -119,7 +119,7 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 mt-4 pt-3 border-t border-white/10">
+            <div className="flex items-center gap-4 mt-3.5 pt-3 border-t border-white/10">
               {PRIMARY_FOUNDER_SOCIALS.map((social, idx) => (
                 <React.Fragment key={social.name}>
                   {idx > 0 && <span className="text-white/20 text-xs select-none">·</span>}
@@ -168,9 +168,9 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
               <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.02)_0%,transparent_60%)] pointer-events-none" />
 
               <div className="relative z-10">
-                {/* Portrait Area / Polished Placeholder Frame */}
+                {/* Portrait Area / Polished Placeholder Frame (occupies roughly 45-50% card height) */}
                 <div
-                  className={`aspect-[4/5] w-full rounded-xl overflow-hidden mb-5 relative bg-black/30 border border-white/10 flex flex-col items-center justify-center ${
+                  className={`w-full max-w-[200px] sm:max-w-[210px] md:max-w-[170px] lg:max-w-[200px] aspect-[4/5] mx-auto rounded-xl overflow-hidden mb-5 relative bg-black/30 border border-white/10 flex flex-col items-center justify-center ${
                     member.imageSrc ? 'p-0' : 'p-4'
                   } select-none shadow-inner`}
                 >
@@ -187,14 +187,14 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.06)_0%,transparent_70%)] pointer-events-none" />
 
                       {/* Monogram Badge */}
-                      <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-xs border border-white/15 flex items-center justify-center relative z-10 transition-transform duration-300 group-hover:scale-105">
-                        <span className="font-display font-extrabold text-lg text-white tracking-tight">
+                      <div className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-xs border border-white/15 flex items-center justify-center relative z-10 transition-transform duration-300 group-hover:scale-105">
+                        <span className="font-display font-extrabold text-base text-white tracking-tight">
                           {member.initials}
                         </span>
                       </div>
 
                       {/* Micro Tag */}
-                      <span className="mt-3 text-[10px] font-mono font-medium uppercase tracking-wider text-neutral-300 bg-white/10 backdrop-blur-xs px-2.5 py-0.5 rounded-full border border-white/15 relative z-10">
+                      <span className="mt-2.5 text-[10px] font-mono font-medium uppercase tracking-wider text-neutral-300 bg-white/10 backdrop-blur-xs px-2.5 py-0.5 rounded-full border border-white/15 relative z-10">
                         Co-Founder
                       </span>
                     </>
@@ -202,27 +202,27 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
                 </div>
 
                 {/* Name */}
-                <h3 className="text-xl font-bold font-display text-white tracking-tight">
+                <h3 className="text-xl sm:text-2xl font-bold font-display text-white tracking-tight">
                   {member.name}
                 </h3>
 
                 {/* Title (Consistent height for perfect divider alignment) */}
                 <div className="min-h-[2.25rem] flex items-center mt-1">
-                  <p className="text-xs font-semibold text-brand-slate-light uppercase tracking-wider">
+                  <p className="text-xs font-bold text-brand-slate-light uppercase tracking-wider">
                     {member.title}
                   </p>
                 </div>
 
                 {/* Focus (Consistent height for perfect divider alignment) */}
                 <div className="min-h-[2.25rem] flex items-center border-b border-white/10 pb-2">
-                  <p className="text-xs font-medium text-neutral-400">
+                  <p className="text-xs font-medium text-neutral-300">
                     {member.focus}
                   </p>
                 </div>
               </div>
 
               {/* Short Description */}
-              <p className="text-xs text-neutral-300 leading-relaxed mt-3 pt-1 relative z-10">
+              <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mt-3 pt-1 relative z-10">
                 {member.description}
               </p>
             </div>
