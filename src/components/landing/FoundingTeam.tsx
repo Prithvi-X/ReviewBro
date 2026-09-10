@@ -23,15 +23,19 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
       </div>
 
       <div className="space-y-6 sm:space-y-8">
-        {/* LEVEL 1: PRIMARY FOUNDER (Wide Horizontal Card) */}
-        <div className="group bg-white rounded-2xl border border-neutral-200/80 p-6 sm:p-8 lg:p-10 sm:flex sm:flex-row sm:items-center gap-7 lg:gap-10 hover:shadow-md hover:-translate-y-1 hover:border-brand-slate/40 transition-all duration-300">
+        {/* LEVEL 1: PRIMARY FOUNDER (Wide Horizontal Card with Signature Theme Dark Green Border) */}
+        <div className="group bg-white rounded-2xl border border-brand-deep-green/65 hover:border-brand-deep-green p-6 sm:p-8 lg:p-10 sm:flex sm:flex-row sm:items-center gap-7 lg:gap-10 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300">
           {/* Portrait Area / Polished Placeholder (Consistent 4:5 Portrait Ratio) */}
-          <div className="w-full sm:w-60 md:w-68 lg:w-76 aspect-[4/5] shrink-0 rounded-xl overflow-hidden relative bg-gradient-to-b from-[#f3f6f8] via-[#ebf0f3] to-[#e2e8ec] border border-neutral-200/70 flex flex-col items-center justify-center p-6 select-none">
+          <div
+            className={`w-full sm:w-60 md:w-68 lg:w-76 aspect-[4/5] shrink-0 rounded-xl overflow-hidden relative bg-gradient-to-b from-[#f3f6f8] via-[#ebf0f3] to-[#e2e8ec] border border-neutral-200/70 flex flex-col items-center justify-center ${
+              PRIMARY_FOUNDER.imageSrc ? 'p-0' : 'p-6'
+            } select-none`}
+          >
             {PRIMARY_FOUNDER.imageSrc ? (
               <img
                 src={PRIMARY_FOUNDER.imageSrc}
                 alt={`${PRIMARY_FOUNDER.name} - ${PRIMARY_FOUNDER.title}`}
-                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                 loading="lazy"
               />
             ) : (

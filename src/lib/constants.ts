@@ -223,7 +223,7 @@ export const PRIMARY_FOUNDER = {
   focus: 'Product · Technology · Strategy',
   description: 'Building the product, technology, and direction behind ReviewBro.',
   initials: 'PR',
-  imageSrc: undefined as string | undefined,
+  imageSrc: '/Founder.png',
 }
 
 export const CO_FOUNDERS = [
