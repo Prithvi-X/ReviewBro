@@ -216,16 +216,17 @@ export const COMPARISON_POINTS = {
 /**
  * The People Behind ReviewBro - Founding Team
  */
-export const FOUNDING_TEAM = [
-  {
-    id: 'prithvi',
-    name: 'Prithvi',
-    title: 'Founder & CEO',
-    focus: 'Product · Technology · Strategy',
-    description: 'Building the product, technology, and direction behind ReviewBro.',
-    initials: 'PR',
-    imageSrc: undefined as string | undefined,
-  },
+export const PRIMARY_FOUNDER = {
+  id: 'prithvi',
+  name: 'Prithvi',
+  title: 'Founder & CEO',
+  focus: 'Product · Technology · Strategy',
+  description: 'Building the product, technology, and direction behind ReviewBro.',
+  initials: 'PR',
+  imageSrc: undefined as string | undefined,
+}
+
+export const CO_FOUNDERS = [
   {
     id: 'roshan',
     name: 'Roshan',
@@ -254,3 +255,5 @@ export const FOUNDING_TEAM = [
     imageSrc: undefined as string | undefined,
   },
 ]
+
+export const FOUNDING_TEAM = [PRIMARY_FOUNDER, ...CO_FOUNDERS]
