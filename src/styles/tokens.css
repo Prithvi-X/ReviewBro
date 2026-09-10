@@ -84,15 +84,6 @@
 }
 
 /* --- LUXURY CHAMPAGNE-GOLD ATTENTION EFFECT (WithAtman.in) --- */
-@keyframes luxuryShimmer {
-  0%, 15% {
-    background-position: 200% 0;
-  }
-  55%, 100% {
-    background-position: -200% 0;
-  }
-}
-
 @keyframes raySweep {
   0%, 20% {
     transform: translateX(-120%) skewX(-20deg);
@@ -137,20 +128,7 @@
 }
 
 .luxury-gold-text {
-  background: linear-gradient(
-    115deg,
-    #cca252 0%,
-    #e5c478 20%,
-    #fffbe8 45%,
-    #ffffff 50%,
-    #fffbe8 55%,
-    #e5c478 80%,
-    #b88a32 100%
-  );
-  background-size: 250% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: luxuryShimmer 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  color: #ffffff;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
