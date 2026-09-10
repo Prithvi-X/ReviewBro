@@ -5,6 +5,7 @@ import {
   CO_FOUNDERS,
   PRIMARY_FOUNDER_VENTURES,
   PRIMARY_FOUNDER_SOCIALS,
+  FOUNDER_SECTION_BG,
 } from '@/lib/constants'
 
 export interface FoundingTeamProps {
@@ -13,22 +14,30 @@ export interface FoundingTeamProps {
 
 export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
   return (
-    <div id="team" className={`mt-24 sm:mt-32 pt-4 scroll-mt-24 ${className || ''}`}>
-      {/* Section Header */}
-      <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-        <Eyebrow theme="light" className="mb-3">
+    <section
+      id="team"
+      className={`mt-20 sm:mt-28 rounded-3xl sm:rounded-[2.5rem] p-6 sm:p-10 lg:p-12 border border-white/10 shadow-2xl relative overflow-hidden scroll-mt-24 ${className || ''}`}
+      style={{ backgroundColor: FOUNDER_SECTION_BG }}
+    >
+      {/* Ambient subtle lighting & satin gradient (One tonal step lighter, softer & breathable) */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(255,255,255,0.04)_0%,transparent_75%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02)_0%,transparent_40%,rgba(0,0,0,0.12)_100%)] pointer-events-none" />
+
+      {/* Section Header (Soft white & neutral text on breathable green canvas) */}
+      <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 relative z-10">
+        <Eyebrow theme="dark" className="mb-3">
           THE PEOPLE BEHIND REVIEWBRO
         </Eyebrow>
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-900 tracking-tight leading-tight">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight">
           Built by people who care about better businesses.
         </h2>
-        <p className="mt-3.5 text-sm sm:text-base text-neutral-600 leading-relaxed max-w-xl mx-auto">
+        <p className="mt-3.5 text-sm sm:text-base text-neutral-300 leading-relaxed max-w-xl mx-auto">
           Four people. Different strengths. One shared goal.
         </p>
       </div>
 
-      <div className="space-y-6 sm:space-y-8">
-        {/* LEVEL 1: PRIMARY FOUNDER (Deepest Green Premium Surface Card) */}
+      <div className="space-y-6 sm:space-y-8 relative z-10">
+        {/* LEVEL 1: PRIMARY FOUNDER (Deepest card in section, slightly deeper than section bg) */}
         <div
           className="group rounded-2xl border border-white/10 p-6 sm:p-8 lg:p-10 sm:flex sm:flex-row sm:items-center gap-7 lg:gap-10 shadow-surface-elevated hover:border-white/20 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden text-white"
           style={{ backgroundColor: PRIMARY_FOUNDER.bgColor }}
@@ -118,44 +127,44 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
               </div>
             </div>
 
-            {/* Social Links */}
-            <div className="flex items-center gap-4 mt-3.5 pt-3 border-t border-white/10">
-              {PRIMARY_FOUNDER_SOCIALS.map((social, idx) => (
-                <React.Fragment key={social.name}>
-                  {idx > 0 && <span className="text-white/20 text-xs select-none">·</span>}
-                  <a
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${PRIMARY_FOUNDER.name} on ${social.name}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-300 hover:text-white transition-colors duration-200"
-                  >
-                    {social.name === 'LinkedIn' ? (
-                      <svg
-                        className="w-3.5 h-3.5 shrink-0 fill-current opacity-85 hover:opacity-100"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.62 1.62 0 0 0 0-3.24 1.62 1.62 0 0 0 0 3.24M7.86 18.5v-8.37H5.07v8.37h2.79z" />
-                      </svg>
-                    ) : (
-                      <svg
-                        className="w-3 h-3 shrink-0 fill-current opacity-85 hover:opacity-100"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                      </svg>
-                    )}
-                    <span>{social.name}</span>
-                  </a>
-                </React.Fragment>
+            {/* Social Links with subtle localized halo */}
+            <div className="flex items-center gap-3 mt-4 pt-3 border-t border-white/10">
+              {PRIMARY_FOUNDER_SOCIALS.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${PRIMARY_FOUNDER.name} on ${social.name}`}
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/10 hover:border-brand-slate-light/40 hover:bg-white/[0.08] hover:shadow-[0_0_12px_rgba(137,157,176,0.22)] transition-all duration-300 group/social"
+                >
+                  {social.name === 'LinkedIn' ? (
+                    <svg
+                      className="w-4 h-4 shrink-0 fill-current text-neutral-300 group-hover/social:text-white transition-colors"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.62 1.62 0 0 0 0-3.24 1.62 1.62 0 0 0 0 3.24M7.86 18.5v-8.37H5.07v8.37h2.79z" />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="w-3.5 h-3.5 shrink-0 fill-current text-neutral-300 group-hover/social:text-white transition-colors"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  )}
+                  <span className="text-xs font-medium text-neutral-300 group-hover/social:text-white transition-colors">
+                    {social.name}
+                  </span>
+                </a>
               ))}
             </div>
           </div>
         </div>
 
-        {/* LEVEL 2: THREE CO-FOUNDER CARDS (1 Row on Desktop / Balanced Grid with Tonal Progression) */}
+        {/* LEVEL 2: THREE CO-FOUNDER CARDS (Slightly lighter than Prithvi card, equal to each other) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {CO_FOUNDERS.map((member) => (
             <div
@@ -231,10 +240,10 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
       </div>
 
       {/* Subtle Closing Line */}
-      <div className="mt-12 text-center text-xs text-neutral-600 font-medium">
+      <div className="mt-12 text-center text-xs text-neutral-400 font-medium relative z-10">
         <span>Different strengths. One direction. </span>
-        <span className="font-bold text-neutral-700">ReviewBro.</span>
+        <span className="font-bold text-neutral-200">ReviewBro.</span>
       </div>
-    </div>
+    </section>
   )
 }

@@ -16,10 +16,9 @@
   --color-brand-slate-subtle: rgba(100, 120, 142, 0.12); /* Subtle slate tag background */
 
   /* --- FOUNDING TEAM TONAL GREEN TOKENS --- */
-  --color-team-prithvi: #071615;              /* Deepest brand green (Level 1 Founder & CEO) */
-  --color-team-roshan: #0b201b;               /* Subtle elevated tonal green (Co-Founder) */
-  --color-team-ayush: #0e2821;                /* Subtle elevated tonal green (Co-Founder) */
-  --color-team-rahul: #102f27;                /* Subtle elevated tonal green (Co-Founder) */
+  --color-team-section-bg: #122a23;           /* Softer, breathable green section canvas (one tonal step lighter than Hero) */
+  --color-team-prithvi: #0a1c17;              /* Deepest card within section (lighter than Hero #071615) */
+  --color-team-cofounder: #0e241f;            /* Equal, slightly lighter co-founder card surface */
 
   /* --- NEUTRALS --- */
   --color-neutral-950: #070b0a;               /* Deepest dark text */

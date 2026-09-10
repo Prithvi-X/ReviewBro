@@ -18,10 +18,9 @@ export default {
           'slate-subtle': 'var(--color-brand-slate-subtle)',
         },
         team: {
+          'section-bg': 'var(--color-team-section-bg)',
           prithvi: 'var(--color-team-prithvi)',
-          roshan: 'var(--color-team-roshan)',
-          ayush: 'var(--color-team-ayush)',
-          rahul: 'var(--color-team-rahul)',
+          cofounder: 'var(--color-team-cofounder)',
         },
         neutral: {
           950: 'var(--color-neutral-950)',
