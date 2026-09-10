@@ -224,6 +224,7 @@ export const PRIMARY_FOUNDER = {
   description: 'Building the product, technology, and direction behind ReviewBro.',
   initials: 'PR',
   imageSrc: '/Founder.png',
+  bgColor: '#071615',
 }
 
 export const CO_FOUNDERS = [
@@ -235,6 +236,7 @@ export const CO_FOUNDERS = [
     description: 'Helping build the business and operations behind ReviewBro.',
     initials: 'RO',
     imageSrc: undefined as string | undefined,
+    bgColor: '#0B201B',
   },
   {
     id: 'ayush',
@@ -244,6 +246,7 @@ export const CO_FOUNDERS = [
     description: 'Making ReviewBro simple to use and easy to recognize.',
     initials: 'AY',
     imageSrc: undefined as string | undefined,
+    bgColor: '#0E2821',
   },
   {
     id: 'rahul',
@@ -253,6 +256,7 @@ export const CO_FOUNDERS = [
     description: 'Building the systems that power ReviewBro.',
     initials: 'RA',
     imageSrc: undefined as string | undefined,
+    bgColor: '#102F27',
   },
 ]
 

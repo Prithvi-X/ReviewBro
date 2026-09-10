@@ -17,6 +17,12 @@ export default {
           'slate-dark': 'var(--color-brand-slate-dark)',
           'slate-subtle': 'var(--color-brand-slate-subtle)',
         },
+        team: {
+          prithvi: 'var(--color-team-prithvi)',
+          roshan: 'var(--color-team-roshan)',
+          ayush: 'var(--color-team-ayush)',
+          rahul: 'var(--color-team-rahul)',
+        },
         neutral: {
           950: 'var(--color-neutral-950)',
           900: 'var(--color-neutral-900)',

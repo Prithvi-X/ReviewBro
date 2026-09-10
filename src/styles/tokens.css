@@ -15,6 +15,12 @@
   --color-brand-slate-dark: #3a4b5a;          /* Deep slate blue */
   --color-brand-slate-subtle: rgba(100, 120, 142, 0.12); /* Subtle slate tag background */
 
+  /* --- FOUNDING TEAM TONAL GREEN TOKENS --- */
+  --color-team-prithvi: #071615;              /* Deepest brand green (Level 1 Founder & CEO) */
+  --color-team-roshan: #0b201b;               /* Subtle elevated tonal green (Co-Founder) */
+  --color-team-ayush: #0e2821;                /* Subtle elevated tonal green (Co-Founder) */
+  --color-team-rahul: #102f27;                /* Subtle elevated tonal green (Co-Founder) */
+
   /* --- NEUTRALS --- */
   --color-neutral-950: #070b0a;               /* Deepest dark text */
   --color-neutral-900: #0f1715;               /* Primary headings & dark elements */

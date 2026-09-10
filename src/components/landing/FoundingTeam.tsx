@@ -28,15 +28,18 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
       </div>
 
       <div className="space-y-6 sm:space-y-8">
-        {/* LEVEL 1: PRIMARY FOUNDER (Deep Green Premium Surface Card) */}
-        <div className="group bg-hero-deep-green rounded-2xl border border-white/10 p-6 sm:p-8 lg:p-10 sm:flex sm:flex-row sm:items-center gap-7 lg:gap-10 shadow-surface-elevated hover:border-white/20 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden text-white">
+        {/* LEVEL 1: PRIMARY FOUNDER (Deepest Green Premium Surface Card) */}
+        <div
+          className="group rounded-2xl border border-white/10 p-6 sm:p-8 lg:p-10 sm:flex sm:flex-row sm:items-center gap-7 lg:gap-10 shadow-surface-elevated hover:border-white/20 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden text-white"
+          style={{ backgroundColor: PRIMARY_FOUNDER.bgColor }}
+        >
           {/* Ambient subtle lighting & satin depth */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(15,36,30,0.6)_0%,transparent_80%)] pointer-events-none" />
-          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.03)_0%,transparent_60%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(255,255,255,0.03)_0%,transparent_80%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.02)_0%,transparent_60%)] pointer-events-none" />
 
           {/* Portrait Area / Polished Frame */}
           <div
-            className={`w-full sm:w-64 md:w-72 lg:w-80 aspect-[4/5] shrink-0 rounded-xl overflow-hidden relative bg-[#040c0b] border border-white/10 flex flex-col items-center justify-center ${
+            className={`w-full sm:w-64 md:w-72 lg:w-80 aspect-[4/5] shrink-0 rounded-xl overflow-hidden relative bg-black/30 border border-white/10 flex flex-col items-center justify-center ${
               PRIMARY_FOUNDER.imageSrc ? 'p-0' : 'p-6'
             } select-none z-10 shadow-inner`}
           >
@@ -50,7 +53,7 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
             ) : (
               <>
                 {/* Ambient subtle decorative background */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(100,120,142,0.18)_0%,transparent_70%)] pointer-events-none" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.06)_0%,transparent_70%)] pointer-events-none" />
 
                 {/* Monogram Badge */}
                 <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-xs border border-white/15 flex items-center justify-center relative z-10 transition-transform duration-300 group-hover:scale-105">
@@ -152,37 +155,46 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
           </div>
         </div>
 
-        {/* LEVEL 2: THREE CO-FOUNDER CARDS (1 Row on Desktop / Balanced Grid) */}
+        {/* LEVEL 2: THREE CO-FOUNDER CARDS (1 Row on Desktop / Balanced Grid with Tonal Progression) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {CO_FOUNDERS.map((member) => (
             <div
               key={member.id}
-              className="group bg-white rounded-2xl border border-neutral-200/80 p-5 sm:p-6 flex flex-col justify-between hover:shadow-md hover:-translate-y-1 hover:border-brand-slate/40 transition-all duration-300"
+              className="group rounded-2xl border border-white/10 p-5 sm:p-6 flex flex-col justify-between shadow-surface-elevated hover:border-white/20 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden text-white"
+              style={{ backgroundColor: member.bgColor }}
             >
-              <div>
-                {/* Portrait Area / Polished Placeholder */}
-                <div className="aspect-[4/5] w-full rounded-xl overflow-hidden mb-5 relative bg-gradient-to-b from-[#f3f6f8] via-[#ebf0f3] to-[#e2e8ec] border border-neutral-200/70 flex flex-col items-center justify-center p-4 select-none">
+              {/* Ambient subtle lighting & satin depth */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(255,255,255,0.03)_0%,transparent_80%)] pointer-events-none" />
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.02)_0%,transparent_60%)] pointer-events-none" />
+
+              <div className="relative z-10">
+                {/* Portrait Area / Polished Placeholder Frame */}
+                <div
+                  className={`aspect-[4/5] w-full rounded-xl overflow-hidden mb-5 relative bg-black/30 border border-white/10 flex flex-col items-center justify-center ${
+                    member.imageSrc ? 'p-0' : 'p-4'
+                  } select-none shadow-inner`}
+                >
                   {member.imageSrc ? (
                     <img
                       src={member.imageSrc}
                       alt={`${member.name} - ${member.title}`}
-                      className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                       loading="lazy"
                     />
                   ) : (
                     <>
                       {/* Ambient subtle decorative background texture */}
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(100,120,142,0.12)_0%,transparent_70%)] pointer-events-none" />
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,0.06)_0%,transparent_70%)] pointer-events-none" />
 
                       {/* Monogram Badge */}
-                      <div className="w-16 h-16 rounded-full bg-white shadow-xs border border-neutral-200/90 flex items-center justify-center relative z-10 transition-transform duration-300 group-hover:scale-105">
-                        <span className="font-display font-extrabold text-lg text-neutral-800 tracking-tight">
+                      <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-xs border border-white/15 flex items-center justify-center relative z-10 transition-transform duration-300 group-hover:scale-105">
+                        <span className="font-display font-extrabold text-lg text-white tracking-tight">
                           {member.initials}
                         </span>
                       </div>
 
                       {/* Micro Tag */}
-                      <span className="mt-3 text-[10px] font-mono font-medium uppercase tracking-wider text-neutral-600 bg-white/80 backdrop-blur-xs px-2.5 py-0.5 rounded-full border border-neutral-200/70 relative z-10">
+                      <span className="mt-3 text-[10px] font-mono font-medium uppercase tracking-wider text-neutral-300 bg-white/10 backdrop-blur-xs px-2.5 py-0.5 rounded-full border border-white/15 relative z-10">
                         Co-Founder
                       </span>
                     </>
@@ -190,27 +202,27 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
                 </div>
 
                 {/* Name */}
-                <h3 className="text-xl font-bold font-display text-neutral-900 tracking-tight group-hover:text-neutral-950 transition-colors">
+                <h3 className="text-xl font-bold font-display text-white tracking-tight">
                   {member.name}
                 </h3>
 
                 {/* Title (Consistent height for perfect divider alignment) */}
                 <div className="min-h-[2.25rem] flex items-center mt-1">
-                  <p className="text-xs font-semibold text-brand-slate uppercase tracking-wider">
+                  <p className="text-xs font-semibold text-brand-slate-light uppercase tracking-wider">
                     {member.title}
                   </p>
                 </div>
 
                 {/* Focus (Consistent height for perfect divider alignment) */}
-                <div className="min-h-[2.25rem] flex items-center border-b border-neutral-100 pb-2">
-                  <p className="text-xs font-medium text-neutral-500">
+                <div className="min-h-[2.25rem] flex items-center border-b border-white/10 pb-2">
+                  <p className="text-xs font-medium text-neutral-400">
                     {member.focus}
                   </p>
                 </div>
               </div>
 
               {/* Short Description */}
-              <p className="text-xs text-neutral-600 leading-relaxed mt-3 pt-1">
+              <p className="text-xs text-neutral-300 leading-relaxed mt-3 pt-1 relative z-10">
                 {member.description}
               </p>
             </div>
