@@ -212,3 +212,45 @@ export const COMPARISON_POINTS = {
     'Built for business growth',
   ],
 }
+
+/**
+ * The People Behind ReviewBro - Founding Team
+ */
+export const FOUNDING_TEAM = [
+  {
+    id: 'prithvi',
+    name: 'Prithvi',
+    title: 'Founder & CEO',
+    focus: 'Product · Technology · Strategy',
+    description: 'Building the product, technology, and direction behind ReviewBro.',
+    initials: 'PR',
+    imageSrc: undefined as string | undefined,
+  },
+  {
+    id: 'roshan',
+    name: 'Roshan',
+    title: 'Co-Founder · Finance & Social',
+    focus: 'Finance · Operations · Social',
+    description: 'Helping build the business and operations behind ReviewBro.',
+    initials: 'RO',
+    imageSrc: undefined as string | undefined,
+  },
+  {
+    id: 'ayush',
+    name: 'Ayush',
+    title: 'Co-Founder · UI/UX & Social',
+    focus: 'Product Design · Social',
+    description: 'Making ReviewBro simple to use and easy to recognize.',
+    initials: 'AY',
+    imageSrc: undefined as string | undefined,
+  },
+  {
+    id: 'rahul',
+    name: 'Rahul',
+    title: 'Co-Founder · Backend',
+    focus: 'Backend · Engineering',
+    description: 'Building the systems that power ReviewBro.',
+    initials: 'RA',
+    imageSrc: undefined as string | undefined,
+  },
+]

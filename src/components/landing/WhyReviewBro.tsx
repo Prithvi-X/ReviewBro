@@ -4,6 +4,7 @@ import { Eyebrow } from '@/components/ui/Eyebrow'
 import { ComparisonCard } from '@/components/ui/ComparisonCard'
 import { PhoneMockup } from '@/components/product/PhoneMockup'
 import { Vision } from './Vision'
+import { FoundingTeam } from './FoundingTeam'
 import { ComingSoon } from './ComingSoon'
 import { COMPARISON_POINTS } from '@/lib/constants'
 import { ArrowRight } from 'lucide-react'
@@ -77,6 +78,9 @@ export const WhyReviewBro: React.FC<WhyReviewBroProps> = ({ className }) => {
 
         {/* Vision Progression */}
         <Vision />
+
+        {/* The People Behind ReviewBro - Founding Team */}
+        <FoundingTeam />
 
         {/* Final CTA integrated within Section 3 */}
         <ComingSoon />
