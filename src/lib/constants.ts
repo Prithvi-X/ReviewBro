@@ -256,4 +256,16 @@ export const CO_FOUNDERS = [
   },
 ]
 
+export const PRIMARY_FOUNDER_VENTURES = [
+  { name: 'WithAtman.in', href: 'https://WithAtman.in/' },
+  { name: 'Xaya.in', href: 'https://Xaya.in/' },
+  { name: 'Bottleneck.in', href: 'https://Bottleneck.in/' },
+  { name: 'Xampire Labs', href: undefined as string | undefined },
+]
+
+export const PRIMARY_FOUNDER_SOCIALS = [
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/prithvi07/' },
+  { name: 'X', href: 'https://x.com/KronoVoid_' },
+]
+
 export const FOUNDING_TEAM = [PRIMARY_FOUNDER, ...CO_FOUNDERS]
