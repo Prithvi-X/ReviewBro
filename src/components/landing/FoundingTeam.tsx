@@ -108,16 +108,44 @@ export const FoundingTeam: React.FC<FoundingTeamProps> = ({ className }) => {
                 {PRIMARY_FOUNDER_VENTURES.map((venture, idx) => (
                   <React.Fragment key={venture.name}>
                     {idx > 0 && <span className="text-white/20 select-none">·</span>}
-                    {venture.href ? (
+                    {venture.highlight === 'gold' ? (
                       <a
                         href={venture.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={
-                          venture.highlight === 'gold'
-                            ? 'gold-shine-text font-semibold relative inline-block underline-offset-4 hover:underline transition-all duration-300'
-                            : 'text-neutral-200 hover:text-white underline-offset-4 hover:underline transition-colors duration-200 font-medium'
-                        }
+                        className="luxury-gold-badge group/gold"
+                      >
+                        <div className="luxury-ray" />
+                        <svg
+                          className="w-3.5 h-3.5 twinkle-star shrink-0"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+                        </svg>
+                        <span className="luxury-gold-text text-xs sm:text-sm font-semibold tracking-tight">
+                          {venture.name}
+                        </span>
+                        <svg
+                          className="w-3 h-3 text-[#e5c478]/80 group-hover/gold:text-white group-hover/gold:translate-x-0.5 group-hover/gold:-translate-y-0.5 transition-all shrink-0"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="M7 17l9.2-9.2M17 17V8H8" />
+                        </svg>
+                      </a>
+                    ) : venture.href ? (
+                      <a
+                        href={venture.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-neutral-200 hover:text-white underline-offset-4 hover:underline transition-colors duration-200 font-medium"
                       >
                         {venture.name}
                       </a>
