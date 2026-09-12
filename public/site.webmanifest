@@ -1,0 +1,27 @@
+{
+  "name": "ReviewBro | More Than Reviews. A Brighter Tomorrow.",
+  "short_name": "ReviewBro",
+  "description": "ReviewBro helps businesses manage reviews, collect customer feedback, reply with AI, and grow reputation from one simple platform.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071615",
+  "theme_color": "#071615",
+  "icons": [
+    {
+      "src": "/brand/logo-mark.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    }
+  ]
+}

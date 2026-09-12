@@ -257,7 +257,7 @@ export const CO_FOUNDERS = [
     focus: 'Product Design · Social',
     description: 'Making ReviewBro simple to use and easy to recognize.',
     initials: 'AY',
-    imageSrc: undefined as string | undefined,
+    imageSrc: '/Ayush.jpeg',
     bgColor: '#0e241f',
   },
 ]

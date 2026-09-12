@@ -2,4 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /dev/
 
+# Host
+Host: https://reviewbro.in
+
+# Sitemaps
 Sitemap: https://reviewbro.in/sitemap.xml

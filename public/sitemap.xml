@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://reviewbro.in/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://reviewbro.in/og-image.png</image:loc>
+      <image:title>ReviewBro - AI Reputation &amp; Customer Review Management Platform</image:title>
+      <image:caption>ReviewBro helps businesses manage reviews, collect customer feedback, and reply with AI.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://reviewbro.in/brand/logo-mark.png</image:loc>
+      <image:title>ReviewBro Brand Logo</image:title>
+      <image:caption>ReviewBro Official Logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://reviewbro.in/WBFounder.png</image:loc>
+      <image:title>Prithvi - Founder &amp; CEO of ReviewBro</image:title>
+      <image:caption>Prithvi, Founder and CEO of ReviewBro</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://reviewbro.in/Roshan.jpeg</image:loc>
+      <image:title>Roshan - Co-Founder of ReviewBro</image:title>
+      <image:caption>Roshan, Co-Founder of ReviewBro</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://reviewbro.in/Rahul.jpeg</image:loc>
+      <image:title>Rahul - Co-Founder of ReviewBro</image:title>
+      <image:caption>Rahul, Co-Founder of ReviewBro</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://reviewbro.in/Ayush.jpeg</image:loc>
+      <image:title>Ayush - Co-Founder of ReviewBro</image:title>
+      <image:caption>Ayush, Co-Founder of ReviewBro</image:caption>
+    </image:image>
   </url>
 </urlset>
